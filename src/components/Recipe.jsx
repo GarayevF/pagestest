@@ -39,10 +39,10 @@ const Recipe = () => {
   });
   const [editIndex, setEditIndex] = useState(null);
 
-  const API_URL = "http://localhost:3000/recipes";
+  const API_URL = "https://garayevf.github.io/pagestest/recipes";
 
   useEffect(() => {
-    fetch("http://localhost:3000/recipes?_page=3&_limit=30")
+    fetch(API_URL)
       .then((res) => res.json())
       .then((data) => setRecipes(data))
       .catch((err) => console.error("Error fetching recipes:", err));
